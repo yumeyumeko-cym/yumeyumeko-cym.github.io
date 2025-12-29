@@ -4,8 +4,14 @@
   const menuBtn = document.getElementById("menuBtn");
   const nav = document.getElementById("nav");
   const year = document.getElementById("year");
+  const lastUpdated = document.getElementById("lastUpdated");
 
   year.textContent = new Date().getFullYear();
+  if (lastUpdated) {
+    const lastMod = new Date(document.lastModified);
+    const opts = { year: "numeric", month: "short", day: "numeric" };
+    lastUpdated.textContent = lastMod.toLocaleDateString(undefined, opts);
+  }
 
   // Theme: saved -> system
   function getSystemTheme() {
