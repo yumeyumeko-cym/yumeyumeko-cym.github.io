@@ -37,10 +37,12 @@ body{
 
   /* Aurora background */
   background:
-    radial-gradient(1200px 700px at 15% 10%, color-mix(in srgb, var(--a1) 38%, transparent), transparent 60%),
-    radial-gradient(1000px 650px at 85% 12%, color-mix(in srgb, var(--a3) 28%, transparent), transparent 62%),
-    radial-gradient(900px 650px at 70% 88%, color-mix(in srgb, var(--a2) 22%, transparent), transparent 62%),
-    linear-gradient(180deg, var(--bg0), var(--bg1));
+    radial-gradient(1200px 780px at 12% 8%, color-mix(in srgb, var(--a1) 32%, transparent) 0%, transparent 70%),
+    radial-gradient(900px 720px at 88% 12%, color-mix(in srgb, var(--a3) 24%, transparent) 0%, transparent 68%),
+    radial-gradient(1000px 740px at 68% 88%, color-mix(in srgb, var(--a2) 20%, transparent) 0%, transparent 74%),
+    linear-gradient(155deg, var(--bg0) 0%, color-mix(in srgb, var(--bg0) 70%, var(--bg1)) 48%, var(--bg1) 100%);
+  background-repeat:no-repeat;
+  background-attachment:fixed;
   overflow-x:hidden;
 }
 
