@@ -1,25 +1,266 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>你的名字 | 个人网站</title>
-  <style>
-    body{max-width:760px;margin:48px auto;padding:0 16px;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial}
-    h1{margin-bottom:8px}
-    .muted{color:#666}
-    a{color:inherit}
-    code{background:#f3f3f3;padding:2px 6px;border-radius:6px}
-  </style>
+  <title>Yiming | Personal Website</title>
+  <meta name="description" content="Personal homepage: research, projects, publications, and contact." />
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
+
 <body>
-  <h1>你好，我是 XXX</h1>
-  <p class="muted">这是我的 GitHub Pages 个人网站。</p>
-  <ul>
-    <li>GitHub：<a href="https://github.com/">你的主页链接</a></li>
-    <li>研究方向：……</li>
-    <li>Email：……</li>
-  </ul>
-  <p>（后面这里会变成博客。）</p>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Home">
+        <span class="brand-dot"></span>
+        <span class="brand-text">Yiming</span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="#about">About</a>
+        <a href="#news">News</a>
+        <a href="#publications">Publications</a>
+        <a href="#projects">Projects</a>
+        <a href="#cv">CV</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="themeBtn" type="button" aria-label="Toggle theme" title="Toggle theme">
+          <span class="icon" aria-hidden="true">☾</span>
+        </button>
+        <button class="icon-btn" id="menuBtn" type="button" aria-label="Open menu" title="Menu">
+          <span class="icon" aria-hidden="true">≡</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero container">
+      <div class="hero-left">
+        <div class="avatar">
+          <!-- Put your photo at assets/img/profile.jpg and uncomment the next line -->
+          <!-- <img src="assets/img/profile.jpg" alt="Yiming profile photo" /> -->
+          <div class="avatar-placeholder" aria-hidden="true">Y</div>
+        </div>
+
+        <div class="hero-text">
+          <h1>Yiming</h1>
+          <p class="subtitle">
+            PhD Student · ECE / CS · University of Toronto
+          </p>
+
+          <p class="lead">
+            I work on <b>network security</b>, <b>anomaly detection</b>, and <b>representation learning</b>,
+            with a focus on robust detection in real-world network traffic.
+          </p>
+
+          <div class="hero-links">
+            <a class="pill" href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="pill" href="#" target="_blank" rel="noreferrer">Google Scholar</a>
+            <a class="pill" href="#" target="_blank" rel="noreferrer">CV (PDF)</a>
+            <a class="pill" href="mailto:chenyiming0618@gmail.com">Email</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right card">
+        <h2 class="card-title">Quick Info</h2>
+        <ul class="kv">
+          <li><span>Research</span><span>Intrusion Detection, OCC, Contrastive Learning</span></li>
+          <li><span>Keywords</span><span>Streaming traffic, robust scoring, calibration</span></li>
+          <li><span>Location</span><span>Toronto, Canada</span></li>
+        </ul>
+        <div class="card-actions">
+          <a class="btn" href="#publications">Publications</a>
+          <a class="btn ghost" href="#projects">Projects</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section container">
+      <div class="section-header">
+        <h2>About</h2>
+        <p>A short bio and a few research interests.</p>
+      </div>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Bio</h3>
+          <p>
+            Write a brief 3–6 line bio here. Include your current position, research topics,
+            advisor/lab (optional), and what kinds of collaborations you are interested in.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Interests</h3>
+          <ul class="bullets">
+            <li>One-class classification (OCC), self-supervised learning</li>
+            <li>Contrastive learning for security representations</li>
+            <li>Reliable anomaly scoring & calibration</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="news" class="section container">
+      <div class="section-header">
+        <h2>News</h2>
+        <p>Recent updates (submissions, releases, talks, etc.).</p>
+      </div>
+      <div class="card">
+        <ul class="timeline">
+          <li>
+            <span class="t-date">2025-12</span>
+            <span class="t-dot"></span>
+            <span class="t-text">Launched my GitHub Pages personal website.</span>
+          </li>
+          <li>
+            <span class="t-date">2025-11</span>
+            <span class="t-dot"></span>
+            <span class="t-text">Working on streaming intrusion detection with contrastive learning.</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="publications" class="section container">
+      <div class="section-header">
+        <h2>Publications</h2>
+        <p>Suggested format: authors (bold your name) · title · venue · links.</p>
+      </div>
+
+      <div class="card">
+        <div class="pub">
+          <div class="pub-title">Your Paper Title Goes Here</div>
+          <div class="pub-authors">
+            <b>Yiming</b>, Coauthor A, Coauthor B
+          </div>
+          <div class="pub-meta">
+            Conference / Journal · 2025
+          </div>
+          <div class="pub-links">
+            <a href="#" target="_blank" rel="noreferrer">PDF</a>
+            <a href="#" target="_blank" rel="noreferrer">Code</a>
+            <a href="#" target="_blank" rel="noreferrer">BibTeX</a>
+          </div>
+        </div>
+
+        <hr class="sep" />
+
+        <div class="pub">
+          <div class="pub-title">Another Paper Title</div>
+          <div class="pub-authors">
+            Coauthor A, <b>Yiming</b>
+          </div>
+          <div class="pub-meta">
+            Workshop · 2024
+          </div>
+          <div class="pub-links">
+            <a href="#" target="_blank" rel="noreferrer">PDF</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section container">
+      <div class="section-header">
+        <h2>Projects</h2>
+        <p>A few representative projects with short descriptions and links.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <h3>Project A</h3>
+          <p class="muted">One-class contrastive intrusion detection for streaming traffic.</p>
+          <ul class="bullets">
+            <li>Representation learning + anomaly scoring</li>
+            <li>Calibration for robust thresholding</li>
+          </ul>
+          <div class="card-actions">
+            <a class="btn ghost" href="#" target="_blank" rel="noreferrer">Repo</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Project B</h3>
+          <p class="muted">Reproducible data processing and evaluation pipeline.</p>
+          <ul class="bullets">
+            <li>Time-binning, feature engineering, dataset alignment</li>
+            <li>Multi-seed reporting with confidence intervals</li>
+          </ul>
+          <div class="card-actions">
+            <a class="btn ghost" href="#" target="_blank" rel="noreferrer">Repo</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Project C</h3>
+          <p class="muted">Embedding visualization and error analysis toolkit.</p>
+          <ul class="bullets">
+            <li>t-SNE / UMAP / clustering diagnostics</li>
+            <li>Interpretability-oriented analysis</li>
+          </ul>
+          <div class="card-actions">
+            <a class="btn ghost" href="#" target="_blank" rel="noreferrer">Repo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cv" class="section container">
+      <div class="section-header">
+        <h2>CV</h2>
+        <p>A brief snapshot. You can link a full PDF above.</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>Education</h3>
+          <ul class="bullets">
+            <li>PhD, University of Toronto, ECE (20xx–present)</li>
+            <li>BEng / MSc ...</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Selected Skills</h3>
+          <ul class="bullets">
+            <li>Python, PyTorch, sklearn, data engineering</li>
+            <li>Reproducible experiments, evaluation pipelines</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section container">
+      <div class="section-header">
+        <h2>Contact</h2>
+        <p>Best ways to reach me.</p>
+      </div>
+
+      <div class="card contact-card">
+        <div class="contact-row">
+          <span class="contact-k">Email</span>
+          <span class="contact-v"><a href="mailto:youremail@example.com">youremail@example.com</a></span>
+        </div>
+        <div class="contact-row">
+          <span class="contact-k">GitHub</span>
+          <span class="contact-v"><a href="https://github.com/" target="_blank" rel="noreferrer">github.com/yourname</a></span>
+        </div>
+        <div class="contact-row">
+          <span class="contact-k">Scholar</span>
+          <span class="contact-v"><a href="#" target="_blank" rel="noreferrer">Google Scholar</a></span>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer container">
+      <div class="muted">
+        © <span id="year"></span> Yiming · Built with GitHub Pages
+      </div>
+    </footer>
+  </main>
+
+  <script src="assets/main.js"></script>
 </body>
 </html>
