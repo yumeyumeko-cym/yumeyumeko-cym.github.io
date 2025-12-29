@@ -9,16 +9,16 @@
 </head>
 
 <body>
-  <a class="skip" href="#content">Skip to content</a>
+  <div class="glow" aria-hidden="true"></div>
 
   <header class="header">
     <div class="container header-inner">
       <a class="brand" href="#top" aria-label="Home">
-        <span class="dot" aria-hidden="true"></span>
+        <span class="brand-badge" aria-hidden="true"></span>
         <span>Yiming</span>
       </a>
 
-      <nav class="nav" id="nav" aria-label="Primary">
+      <nav class="nav" id="nav" aria-label="Primary navigation">
         <a href="#about">About</a>
         <a href="#publications">Publications</a>
         <a href="#projects">Projects</a>
@@ -26,164 +26,235 @@
       </nav>
 
       <div class="actions">
-        <button class="icon-btn" id="themeBtn" type="button" aria-label="Toggle theme">☀</button>
-        <button class="icon-btn" id="menuBtn" type="button" aria-label="Menu">≡</button>
+        <button class="icon-btn" id="themeBtn" type="button" aria-label="Toggle theme" title="Switch theme">☀</button>
+        <button class="icon-btn" id="menuBtn" type="button" aria-label="Menu" title="Menu">≡</button>
       </div>
     </div>
   </header>
 
-  <main id="content" class="container">
-    <div id="top"></div>
-
+  <main class="container" id="top">
     <section class="hero">
-      <div class="card hero-left">
-        <div class="hero-top">
-          <div class="avatar" title="Profile photo">
-            <!-- Put your photo at assets/img/profile.jpg and uncomment below -->
-            <!-- <img src="assets/img/profile.jpg" alt="Yiming" /> -->
-            <div class="ph" aria-hidden="true">Y</div>
+      <div class="card">
+        <div class="card-inner">
+          <div class="hero-row">
+            <div class="avatar">
+              <!-- Put your photo at assets/img/profile.jpg and uncomment below -->
+              <!-- <img src="assets/img/profile.jpg" alt="Yiming" /> -->
+              <div class="ph" aria-hidden="true">Y</div>
+            </div>
+
+            <div>
+              <h1 class="hero-title">Yiming</h1>
+              <div class="hero-sub">PhD Student · University of Toronto · Network Security / ML</div>
+            </div>
           </div>
 
-          <div class="hgroup">
-            <h1>Yiming</h1>
-            <div class="subtitle">PhD Student · University of Toronto · Network Security</div>
+          <p class="hero-lead">
+            I work on anomaly detection and representation learning for real-world network traffic,
+            focusing on robust scoring, calibration, and deployable intrusion detection.
+          </p>
+
+          <div class="pills">
+            <a class="pill" href="https://github.com/" target="_blank" rel="noreferrer">
+              <span class="dot" aria-hidden="true"></span> GitHub
+            </a>
+            <a class="pill" href="#" target="_blank" rel="noreferrer">
+              <span class="dot" aria-hidden="true"></span> Google Scholar
+            </a>
+            <a class="pill" href="#" target="_blank" rel="noreferrer">
+              <span class="dot" aria-hidden="true"></span> CV (PDF)
+            </a>
+            <a class="pill" href="mailto:youremail@example.com">
+              <span class="dot" aria-hidden="true"></span> Email
+            </a>
           </div>
-        </div>
 
-        <p class="lead">
-          I study anomaly detection and representation learning for network traffic,
-          with an emphasis on robust, deployable intrusion detection.
-        </p>
+          <div class="stats">
+            <div class="stat">
+              <div class="k">Focus</div>
+              <div class="v">Streaming intrusion detection</div>
+            </div>
+            <div class="stat">
+              <div class="k">Methods</div>
+              <div class="v">OCC · Contrastive learning</div>
+            </div>
+          </div>
 
-        <div class="badges">
-          <a class="badge" href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
-          <a class="badge" href="#" target="_blank" rel="noreferrer">Google Scholar</a>
-          <a class="badge" href="#" target="_blank" rel="noreferrer">CV (PDF)</a>
-          <a class="badge" href="mailto:youremail@example.com">Email</a>
+          <div class="btnrow">
+            <a class="btn primary" href="#publications">Explore Publications</a>
+            <a class="btn" href="#projects">View Projects</a>
+          </div>
         </div>
       </div>
 
-      <aside class="card hero-right">
-        <ul class="kv">
-          <li><span class="k">Affiliation</span><span class="v">ECE / CS, University of Toronto</span></li>
-          <li><span class="k">Interests</span><span class="v">OCC, contrastive learning, calibration</span></li>
-          <li><span class="k">Location</span><span class="v">Toronto, Canada</span></li>
-        </ul>
-        <div class="btnrow">
-          <a class="btn primary" href="#publications">Publications</a>
-          <a class="btn" href="#projects">Projects</a>
+      <aside class="card">
+        <div class="card-inner">
+          <div class="section-head" style="margin-bottom:10px;">
+            <h2 style="margin:0;">Quick Info</h2>
+            <p style="margin:0;">at a glance</p>
+          </div>
+
+          <div style="display:grid; gap:10px;">
+            <div class="stat">
+              <div class="k">Affiliation</div>
+              <div class="v">ECE / CS, University of Toronto</div>
+            </div>
+            <div class="stat">
+              <div class="k">Keywords</div>
+              <div class="v">Calibration · Robust scoring</div>
+            </div>
+            <div class="stat">
+              <div class="k">Location</div>
+              <div class="v">Toronto, Canada</div>
+            </div>
+          </div>
         </div>
       </aside>
     </section>
 
     <section id="about" class="section">
-      <h2>About</h2>
-      <p class="desc">A short bio and what you are currently working on.</p>
+      <div class="section-head">
+        <h2>About</h2>
+        <p>A short bio + research interests.</p>
+      </div>
 
       <div class="grid-2">
-        <div class="card pad">
-          <h3 style="margin:0 0 8px;">Bio</h3>
-          <p style="margin:0;color:var(--muted);">
-            Write 4–6 lines here: your research focus, advisor/lab (optional),
-            and what kinds of collaborations you are open to.
-          </p>
+        <div class="card">
+          <div class="card-inner">
+            <p style="margin:0;color:var(--muted);">
+              Write 4–6 lines here: your current role, what problems you study,
+              and what types of collaborations you are open to.
+            </p>
+
+            <hr class="sep" />
+
+            <ul class="list">
+              <li>One-class & self-supervised anomaly detection</li>
+              <li>Contrastive representations for security</li>
+              <li>Reliable evaluation and calibration</li>
+            </ul>
+          </div>
         </div>
 
-        <div class="card pad">
-          <h3 style="margin:0 0 8px;">Research Topics</h3>
-          <ul class="list" style="margin-top:0;">
-            <li>One-class & self-supervised anomaly detection</li>
-            <li>Contrastive learning for security representations</li>
-            <li>Reliable scoring, calibration, and evaluation</li>
-          </ul>
+        <div class="card">
+          <div class="card-inner">
+            <div class="section-head" style="margin-bottom:8px;">
+              <h2 style="margin:0; font-size:16px;">Now</h2>
+              <p style="margin:0;">what I'm doing</p>
+            </div>
+            <ul class="list">
+              <li>Building robust detectors for real network traffic distribution shifts</li>
+              <li>Designing calibrated anomaly scores for stable thresholding</li>
+              <li>Reproducible pipelines: multi-seed reporting & confidence intervals</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
     <section id="publications" class="section">
-      <h2>Publications</h2>
-      <p class="desc">Suggested format: authors (bold your name), title, venue, links.</p>
+      <div class="section-head">
+        <h2>Publications</h2>
+        <p>Authors (bold mine) · venue · links.</p>
+      </div>
 
-      <div class="card pad">
-        <div class="pub">
-          <div class="title">Paper Title Goes Here</div>
-          <div class="meta"><b>Yiming</b>, Coauthor A, Coauthor B · Conference/Journal · 2025</div>
-          <div class="links">
-            <a href="#" target="_blank" rel="noreferrer">PDF</a>
-            <a href="#" target="_blank" rel="noreferrer">Code</a>
-            <a href="#" target="_blank" rel="noreferrer">BibTeX</a>
+      <div class="card">
+        <div class="card-inner">
+          <div class="pub">
+            <div class="title">Paper Title Goes Here</div>
+            <div class="meta"><b>Yiming</b>, Coauthor A, Coauthor B · Conference/Journal · 2025</div>
+            <div class="links">
+              <a href="#" target="_blank" rel="noreferrer">PDF</a>
+              <a href="#" target="_blank" rel="noreferrer">Code</a>
+              <a href="#" target="_blank" rel="noreferrer">BibTeX</a>
+            </div>
           </div>
-        </div>
 
-        <div class="pub">
-          <div class="title">Another Paper Title</div>
-          <div class="meta">Coauthor A, <b>Yiming</b> · Workshop · 2024</div>
-          <div class="links">
-            <a href="#" target="_blank" rel="noreferrer">PDF</a>
+          <div class="pub">
+            <div class="title">Another Paper Title</div>
+            <div class="meta">Coauthor A, <b>Yiming</b> · Workshop · 2024</div>
+            <div class="links">
+              <a href="#" target="_blank" rel="noreferrer">PDF</a>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <section id="projects" class="section">
-      <h2>Projects</h2>
-      <p class="desc">A few representative projects with short descriptions.</p>
+      <div class="section-head">
+        <h2>Projects</h2>
+        <p>Selected work and open-source.</p>
+      </div>
 
       <div class="grid-3">
-        <div class="card pad">
-          <h3 style="margin:0 0 8px;">Project A</h3>
-          <p style="margin:0 0 10px;color:var(--muted);">
-            One-class contrastive intrusion detection for streaming traffic.
-          </p>
-          <ul class="list">
-            <li>Representation learning + anomaly scoring</li>
-            <li>Calibration for robust thresholds</li>
-          </ul>
-          <div class="btnrow">
-            <a class="btn" href="#" target="_blank" rel="noreferrer">Repo</a>
+        <div class="card">
+          <div class="card-inner">
+            <div style="font-weight:760;">Project A</div>
+            <div style="color:var(--muted); margin-top:6px;">
+              One-class contrastive intrusion detection for streaming traffic.
+            </div>
+            <hr class="sep" />
+            <ul class="list">
+              <li>Representation learning + scoring</li>
+              <li>Calibration for robust thresholds</li>
+            </ul>
+            <div class="btnrow">
+              <a class="btn" href="#" target="_blank" rel="noreferrer">Repo</a>
+            </div>
           </div>
         </div>
 
-        <div class="card pad">
-          <h3 style="margin:0 0 8px;">Project B</h3>
-          <p style="margin:0 0 10px;color:var(--muted);">
-            Data processing + reproducible evaluation pipeline.
-          </p>
-          <ul class="list">
-            <li>Time-binning, feature engineering</li>
-            <li>Multi-seed results + confidence intervals</li>
-          </ul>
-          <div class="btnrow">
-            <a class="btn" href="#" target="_blank" rel="noreferrer">Repo</a>
+        <div class="card">
+          <div class="card-inner">
+            <div style="font-weight:760;">Project B</div>
+            <div style="color:var(--muted); margin-top:6px;">
+              Data processing + reproducible evaluation pipeline.
+            </div>
+            <hr class="sep" />
+            <ul class="list">
+              <li>Time-binning, feature engineering</li>
+              <li>Multi-seed results + CIs</li>
+            </ul>
+            <div class="btnrow">
+              <a class="btn" href="#" target="_blank" rel="noreferrer">Repo</a>
+            </div>
           </div>
         </div>
 
-        <div class="card pad">
-          <h3 style="margin:0 0 8px;">Project C</h3>
-          <p style="margin:0 0 10px;color:var(--muted);">
-            Visualization and error analysis toolkit for embeddings.
-          </p>
-          <ul class="list">
-            <li>t-SNE / UMAP / diagnostics</li>
-            <li>Interpretability-oriented analysis</li>
-          </ul>
-          <div class="btnrow">
-            <a class="btn" href="#" target="_blank" rel="noreferrer">Repo</a>
+        <div class="card">
+          <div class="card-inner">
+            <div style="font-weight:760;">Project C</div>
+            <div style="color:var(--muted); margin-top:6px;">
+              Visualization and error analysis toolkit.
+            </div>
+            <hr class="sep" />
+            <ul class="list">
+              <li>t-SNE / UMAP / diagnostics</li>
+              <li>Interpretability-oriented analysis</li>
+            </ul>
+            <div class="btnrow">
+              <a class="btn" href="#" target="_blank" rel="noreferrer">Repo</a>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <section id="contact" class="section">
-      <h2>Contact</h2>
-      <p class="desc">Best ways to reach me.</p>
+      <div class="section-head">
+        <h2>Contact</h2>
+        <p>Best ways to reach me.</p>
+      </div>
 
-      <div class="card pad">
-        <ul class="kv">
-          <li><span class="k">Email</span><span class="v"><a href="mailto:youremail@example.com">youremail@example.com</a></span></li>
-          <li><span class="k">GitHub</span><span class="v"><a href="https://github.com/" target="_blank" rel="noreferrer">github.com/yourname</a></span></li>
-          <li><span class="k">Scholar</span><span class="v"><a href="#" target="_blank" rel="noreferrer">Google Scholar</a></span></li>
-        </ul>
+      <div class="card">
+        <div class="card-inner">
+          <ul class="list" style="padding-left: 18px; margin:0;">
+            <li>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></li>
+            <li>GitHub: <a href="https://github.com/" target="_blank" rel="noreferrer">github.com/yourname</a></li>
+            <li>Google Scholar: <a href="#" target="_blank" rel="noreferrer">profile link</a></li>
+          </ul>
+        </div>
       </div>
     </section>
 

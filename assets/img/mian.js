@@ -7,7 +7,7 @@
 
   year.textContent = new Date().getFullYear();
 
-  // Theme: saved -> system -> default dark
+  // Theme: saved -> system
   function getSystemTheme() {
     return window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches
       ? "light"
@@ -17,16 +17,17 @@
   function applyTheme(theme) {
     if (theme === "light") {
       root.setAttribute("data-theme", "light");
-      themeBtn.querySelector(".icon").textContent = "☀";
+      themeBtn.textContent = "☾";
+      themeBtn.title = "Switch to dark";
     } else {
       root.removeAttribute("data-theme");
-      themeBtn.querySelector(".icon").textContent = "☾";
+      themeBtn.textContent = "☀";
+      themeBtn.title = "Switch to light";
     }
   }
 
   const saved = localStorage.getItem("theme");
-  const initial = saved || getSystemTheme();
-  applyTheme(initial);
+  applyTheme(saved || getSystemTheme());
 
   themeBtn.addEventListener("click", () => {
     const isLight = root.getAttribute("data-theme") === "light";
@@ -36,12 +37,26 @@
   });
 
   // Mobile menu
-  menuBtn.addEventListener("click", () => {
-    nav.classList.toggle("open");
-  });
+  menuBtn.addEventListener("click", () => nav.classList.toggle("open"));
+  nav.querySelectorAll("a").forEach(a => a.addEventListener("click", () => nav.classList.remove("open")));
 
-  // Close menu after click
-  nav.querySelectorAll("a").forEach((a) => {
-    a.addEventListener("click", () => nav.classList.remove("open"));
-  });
+  // Active section highlight on scroll
+  const links = Array.from(nav.querySelectorAll('a[href^="#"]'));
+  const map = links
+    .map(a => ({ a, id: a.getAttribute("href").slice(1), el: document.getElementById(a.getAttribute("href").slice(1)) }))
+    .filter(x => x.el);
+
+  function onScroll() {
+    const y = window.scrollY + 110;
+    let cur = null;
+    for (const x of map) {
+      if (x.el.offsetTop <= y) cur = x;
+    }
+    links.forEach(a => a.style.background = "transparent");
+    if (cur) {
+      cur.a.style.background = "color-mix(in srgb, var(--panel2) 92%, transparent)";
+    }
+  }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
 })();
